@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Neriva Dundas">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <title>QM Productions</title>
 </head>
 <body>
     <section class="splash">
-        <img src="./img/splash.png" alt="qm logo">
-        <!-- <img class="scroll-icon" src="./img/down.svg" alt="scroll-icon"> -->
+        <img src="./img/splash.png" alt="qm logo" class="splashImg">
+        
     </section>
 
     
@@ -22,10 +23,34 @@
                 <img src="./img/logo.svg" alt="">
             </div>
 
-            <div class="icon-bars">
+            <div class="icon-bars" id="iconBars">
                 <span class="bars bar1"></span>
                 <span class="bars bar2"></span>
                 <span class="bars bar3"></span>
+            </div>
+
+            <div class="navMenu" id="navMenu">
+                <div class="close-icon" id="closeIcon">
+                    <span class="close bar1"></span>
+                    <span class="close bar2"></span>
+                </div>
+
+                <ul class="navLinks">
+                    <li> <a href="#"> Cases </a></li>
+                    <li> <a href="#"> About </a></li>
+                    <li> <a href="#"> Contact </a></li>
+                </ul>
+
+                <div class="lang">
+                    <p><span>ENG</span> | NL</p>
+                </div>
+                
+                    <ul class="socials" id="socials">
+                        <li><i class="fa fa-facebook"></i></li>
+                        <li><i class="fa fa-instagram"></i></li>
+                        <li><i class="fa fa-linkedin"></i></li>
+                    </ul>
+                
             </div>
         </div>
     </nav>
@@ -115,7 +140,7 @@
 
             <section class="section-three">
                 <div class="video-container">
-                    <video src="img/video.mp4" autoplay muted></video>
+                    <video src="img/video.mp4" autoplay muted loop></video>
                 </div>
 
                 <div class="video-content">

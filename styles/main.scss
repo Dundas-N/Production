@@ -31,10 +31,13 @@ body{
 .splash{
     height: 100vh;
     width: 100%;
-    cursor: pointer;
-    
-
-    img{
+    // cursor: pointer;
+    position: absolute;
+    background-color: $color2;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    .splashImg{
         text-align: center;
         width: 100%;
         max-width: 302px;
@@ -75,7 +78,7 @@ nav{
         position: relative;
         display: block;
         cursor: pointer;
-        // z-index: 2;
+        // z-index: 4;
         &:hover{
             transform: scale(1.2);
         }
@@ -98,6 +101,107 @@ nav{
         position: absolute;
         left: 0;
         border-radius: 0; 
+    }
+    .navMenu{
+        display: none;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        flex-direction: column;
+
+    }
+     .close-icon{
+        width: 35px;
+        height: 44px;
+        position: absolute;
+        top: 1%;
+        right: 1%;
+        display: block;
+        cursor: pointer;
+
+        ::before, ::after{
+            position: absolute;
+            left: 15px;
+            content: '';
+            height: 44px;
+            width: 2px;
+            background-color: $color2;          
+        }
+
+        &:hover{
+            transform: scale(1.2);
+        }  
+          
+        ::before{
+            transform: rotate(45deg);
+        }
+        ::after{
+            transform: rotate(-45deg);
+        }
+    }    
+    
+
+    .navLinks {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 0px;
+
+        li{
+            margin-bottom: 60px; 
+        }
+        
+        a{
+            font-size: 40px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $color2;
+            letter-spacing: 2px;
+        }
+    }
+   
+    .lang{
+        p{
+            color: $color2;
+            font-size: 18px;
+            font-weight: 200;
+            position: absolute;
+            left: 30px;
+            bottom: 15px;
+            cursor: pointer;
+        }
+        span{
+            font-weight: 400;
+        }
+    }
+
+    .socials{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        right: 30px;
+        bottom: 15px;
+        cursor: pointer;
+
+        li{
+            margin-left: 20px;
+            list-style: none;
+        }
+        .fa{
+            font-size: 25px;
+            color: $color2;
+            opacity: 0.8;
+        }
+        
     }
 }
 
@@ -194,7 +298,7 @@ nav{
     img{
         width: 100%;
         max-width:350px;
-        // margin-top: 50px;
+        max-height: 350px;
     }
 
     p{
@@ -292,6 +396,9 @@ nav{
        .btn{
            margin-top: 100px;
        }
+       img{
+        max-height: 100%;
+        }
     }
 
     .section-three{
@@ -380,8 +487,6 @@ nav{
             // outline: blue 2px solid;
             margin-left: 30px;
         }
-
-
     }
 
     .hero .section-two{
@@ -571,5 +676,25 @@ nav{
     }
 }
 
-//----------------------------------- DESKTOP SIZE  ------------------------------------------
-// @media only screen and (min-width:1200px){}
+/*----------------------------------- DESKTOP SIZE  ------------------------------------------*/
+@media only screen and (min-width:1200px){
+    body{
+        max-width: 1600px; 
+        margin: 0 auto;
+        width: 100%;
+
+        h2{
+            font-size: 45px;
+        }
+    }
+    .section-one{
+
+        h1{
+            font-size: 60px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+
+} 

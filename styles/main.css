@@ -24,10 +24,14 @@ body a {
 .splash {
   height: 100vh;
   width: 100%;
-  cursor: pointer;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
-.splash img {
+.splash .splashImg {
   text-align: center;
   width: 100%;
   max-width: 302px;
@@ -104,6 +108,128 @@ nav .bars {
   position: absolute;
   left: 0;
   border-radius: 0;
+}
+
+nav .navMenu {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav .close-icon {
+  width: 35px;
+  height: 44px;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  display: block;
+  cursor: pointer;
+}
+
+nav .close-icon ::before, nav .close-icon ::after {
+  position: absolute;
+  left: 15px;
+  content: '';
+  height: 44px;
+  width: 2px;
+  background-color: #fff;
+}
+
+nav .close-icon:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+nav .close-icon ::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+nav .close-icon ::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+nav .navLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding-left: 0px;
+}
+
+nav .navLinks li {
+  margin-bottom: 60px;
+}
+
+nav .navLinks a {
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+nav .lang p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 200;
+  position: absolute;
+  left: 30px;
+  bottom: 15px;
+  cursor: pointer;
+}
+
+nav .lang span {
+  font-weight: 400;
+}
+
+nav .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  right: 30px;
+  bottom: 15px;
+  cursor: pointer;
+}
+
+nav .socials li {
+  margin-left: 20px;
+  list-style: none;
+}
+
+nav .socials .fa {
+  font-size: 25px;
+  color: #fff;
+  opacity: 0.8;
 }
 
 .hero .container {
@@ -219,6 +345,7 @@ nav .bars {
 .section-two img {
   width: 100%;
   max-width: 350px;
+  max-height: 350px;
 }
 
 .section-two p {
@@ -321,6 +448,9 @@ nav .bars {
   }
   .section-two .btn {
     margin-top: 100px;
+  }
+  .section-two img {
+    max-height: 100%;
   }
   .section-three .video-content {
     width: 50%;
@@ -606,6 +736,24 @@ nav .bars {
     left: 40%;
     width: 150px;
     font-weight: 300;
+  }
+}
+
+/*----------------------------------- DESKTOP SIZE  ------------------------------------------*/
+@media only screen and (min-width: 1200px) {
+  body {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  body h2 {
+    font-size: 45px;
+  }
+  .section-one h1 {
+    font-size: 60px;
+  }
+  .section-one p {
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=main.css.map */
