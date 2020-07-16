@@ -6,21 +6,21 @@ let navMenu = document.querySelector('.navMenu');
 const splash = document.querySelector(".splash");
 const splashImg = document.querySelector(".splashImg");
 
-TweenMax.to(splash, 1, {delay: 1, top: "-100%", ease: "power2.out" });
+TweenMax.to(splash, 1, {delay: 1, top: "-200%", ease: "power2.out" });
 TweenMax.to(splashImg, 0.5, {delay: 0.8, opacity: 0, y: -500, ease: "power2.out"  });
 
 
 //Hero page l
 gsap.timeline({defaults:{ease:"power2.out" , duration:2}})
     .from(".hero-image-l h1",{delay: 1, x: -100, transformOrigin:"right" })
-    .from(".subTitle", {delay: 0.1, opacity: 0 });
+    .from(".subTitle", { opacity: 0 });
 
 //section one l
 let tlOne = gsap.timeline({
     scrollTrigger: {
         trigger: ".pageOne",
         start: "top center",
-        markers: true,
+        markers: false,
         // toggleActions: "restart none none none"
     }
 });
@@ -32,15 +32,24 @@ let tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".pageTwo",
         start: "top center",
-        markers: true,
+        markers: false,
         toggleActions: "restart none none none"
     }
 });
-tl.from(".projects", 1,{delay: 0.2 , y: 100,  opacity: 0 , stagger: 0.6, ease: "circ.out" })
-    .from(".viewMore", {delay: 0.3, opacity: 0})
-    .from(".info",{delay: 0.6, x: -100, opacity: 0 , ease: "power2.out" });
+tl.from(".pageTwo .projects", 1,{ x: 100,  opacity: 0 , stagger: 0.6, ease: "circ.out" })
+    .from(".pageTwo .viewMore", {delay: 0.3, opacity: 0});
 
-
+ //PAGE Three 
+ let tlThree = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".pageThree",
+        start: "top center",
+        markers: false,
+        toggleActions: "restart none none none"
+    }
+});
+tlThree.from(".info",{delay: 0.3, x: -100, opacity: 0 , ease: "circ.out"});
+    
 //  ----------------------------------  NAVIGATION BAR SECTION ---------------------------------------
 let navBtn = document.getElementById('iconBars');
 navBtn.addEventListener('click', openMenu);

@@ -32,7 +32,6 @@ body{
 .splash{
     height: 100vh;
     width: 100%;
-    // cursor: pointer;
     position: absolute;
     background-color: $color2;
     top: 0;
@@ -51,23 +50,6 @@ body{
     }
 }
 
-// .cursor{
-//     // position: absolute;
-//     // top:0;
-//     // left: 0;
-//     // width: 100%;
-//     // height: 100vh;
-//     // background: $color2;
-//     // z-index: -1;
-//     pointer-events: none;
-//     position: fixed;
-//     padding: 4.8px;
-//     background-color: $color1;
-//     border-radius: 50%;
-//     mix-blend-mode:difference;
-//     transition: transform 0.3s ease;
-// }
-
 nav{
         position: fixed;
         top: 0;
@@ -80,8 +62,7 @@ nav{
         justify-content: space-between;
         align-items: center;
         padding-right: 15px;
-        padding-left: 15px;
-        
+        padding-left: 15px;      
     }
     .icon-bars{
         width: 35px;
@@ -89,7 +70,6 @@ nav{
         position: relative;
         display: block;
         cursor: pointer;
-        // z-index: 4;
         &:hover{
             transform: scale(1.2);
         }
@@ -123,7 +103,6 @@ nav{
         left: 0;
         z-index: 2;
         flex-direction: column;
-
     }
      .close-icon{
         width: 35px;
@@ -177,6 +156,10 @@ nav{
             text-transform: uppercase;
             color: $color2;
             letter-spacing: 2px; 
+
+            &:hover{
+                color: #b08d74;
+            }
         }
     }
    
@@ -206,6 +189,10 @@ nav{
         li{
             margin-left: 20px;
             list-style: none;
+
+            &:hover{
+                transform: scale(1.5);
+            }
         }
         .fa{
             font-size: 25px;
@@ -235,7 +222,6 @@ nav{
         justify-content: center;
         margin-top: 70px;
         position: relative;
-        // outline: red solid 2px;
         width: 30%;
         margin-left: auto;
         margin-right: auto;
@@ -255,8 +241,7 @@ nav{
     .btn:hover::after{
         content: '';
         transform: scaleX(1);
-        transform-origin: left;
-        
+        transform-origin: left;      
     }
 
     .section-one, .section-three{
@@ -415,13 +400,10 @@ nav{
     .section-three{
         .video-content{
             width: 50%;
-            // outline: red solid 2px;
             h1{ 
                 display: flex;
-                // outline: blue solid 2px;
                 justify-content: center;
                 text-align: center;
-
             }
             
             .contactUs{
@@ -433,8 +415,7 @@ nav{
                 text-align: center;
     
                 &:hover::after{
-                    background-color: $color2;
-                   
+                    background-color: $color2;                 
                 }
             }
         }
@@ -445,7 +426,6 @@ nav{
 //------------------------------- LARGE TABLET & LAPTOP SIZE  ------------------------------------
 @media only screen and (min-width:920px){
     nav{
-        // top:5%;
         top:0;
     }
 
@@ -462,8 +442,7 @@ nav{
             background-repeat: no-repeat;
             background-size: cover;
             width: 100%;
-            position: relative;
-            
+            position: relative;          
         }
 
         h1{
@@ -490,12 +469,10 @@ nav{
         }
         .subTitle::before{
             content: "Film";
-            // outline: blue 2px solid;
             margin-right: 30px;
         }
         .subTitle::after{
             content: "Art Direction";
-            // outline: blue 2px solid;
             margin-left: 30px;
         }
     }
@@ -505,8 +482,7 @@ nav{
     }
     .hero .section-two-l{
         display: block;
-        width: 100%;
-        
+        width: 100%;       
 
         .pageOne{
             width: 100%;
@@ -529,7 +505,6 @@ nav{
         .pageTwo{
             width: 100%;
             height: 100vh;
-            // background-color: lightskyblue;
             padding: 0px 15px;
             position: relative;
         }
@@ -685,23 +660,19 @@ nav{
         }
 
         .pageThree{
-            // background-color: lightcoral;
             width: 100%;
             height: 100vh;
             position: relative;
-            // display: flex;
 
             .containerThree{
                 width: 100%;
                 height: 60%;
-                // background: green;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 display: flex;
-                flex-direction: row;
-            
+                flex-direction: row;         
             }
 
             .ring{
@@ -714,8 +685,6 @@ nav{
                 transform: translate(-50%, -50%);
                 z-index: 2;
                 opacity: 0.8;
-                // top: 45%;
-                // left: 10%;
             }
             .ring img{
                 width: 100%;   
@@ -732,16 +701,16 @@ nav{
 
             .info{
                 color: $color1;
-                font-size: 20px;
-                line-height: 40px;
-                width: 500px;
+                font-size: 1.5rem;       
+                line-height:3rem; 
+                font-weight: 300;
+                max-width: 500px;
                 height: auto;
                 padding: 0 10px;
                 display: flex;
                 position: absolute;
                 top: 20%;
                 left: 50%;
-                // transform: translate(-50%, -50%);
                 transform: rotate(0deg);
                 visibility: visible;
             }
@@ -750,7 +719,7 @@ nav{
                 top: 35%;
                 left: 10%;
                 color: $color1;
-                font-size: 35px;
+                font-size: 2.5rem;
                 font-weight: 300;
             }
         }
